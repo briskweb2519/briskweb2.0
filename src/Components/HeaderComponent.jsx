@@ -12,7 +12,7 @@ class HeaderComponent extends Component {
     render() {
         return (
             <>
-                <Navbar collapseOnSelect expand="lg" className="p-3">
+                <Navbar sticky="top" collapseOnSelect expand="lg" className="p-3" style={{backgroundColor:"white"}}>
                     <Container>
 
                         {/* <Image src={logo} width='10%' rounded className="img-fluid z-depth-1 wow tada" data-wow-delay="0.2s" /> */}

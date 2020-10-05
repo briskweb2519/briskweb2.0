@@ -13,13 +13,29 @@ import app from '../Images/app.png'
 import digital from '../Images/digital.png'
 
 class HomeComponent extends Component {
-    // constructor(props){
-    //     super(props)
-    // }
+    constructor(props) {
+        super(props)
+
+        this.WebDevelopmentComponent = this.WebDevelopmentComponent.bind(this)
+        this.AppDevelopmentComponent = this.AppDevelopmentComponent.bind(this)
+        this.DigitalMarketingComponent = this.DigitalMarketingComponent.bind(this)
+    }
+
+    WebDevelopmentComponent() {
+        this.props.history.push('/services/webdevelopment')
+    }
+
+    AppDevelopmentComponent() {
+        this.props.history.push('/services/appdevelopment')
+    }
+
+    DigitalMarketingComponent() {
+        this.props.history.push('/services/digitalmarketing')
+    }
     render() {
         return (
             <>
-                <Container>
+                <Container >
                     <div style={{ color: "black", marginBottom: "7%", marginTop: "5%" }}>
                         <h4 className='text-center '>
                             Briskweb is a Software Development Company to develop
@@ -40,12 +56,12 @@ class HomeComponent extends Component {
                                 <div style={{ textAlign: "center", marginTop: "5%" }}>
                                     <Image src={web} width="30%"></Image>
                                     <Card.Body>
-                                        <Card.Title>Web Development</Card.Title>
+                                        <Card.Title style={{ color: "#195e83" }}>Web Development</Card.Title>
                                         <Card.Text>
                                             Details About Web Development
                                         </Card.Text>
                                         <div id="container">
-                                            <button class="learn-more">
+                                            <button class="learn-more" onClick={this.WebDevelopmentComponent}>
                                                 <span class="circle" aria-hidden="true">
                                                     <span class="icon arrow"></span>
                                                 </span>
@@ -61,12 +77,12 @@ class HomeComponent extends Component {
                                 <div style={{ textAlign: "center", marginTop: "5%" }}>
                                     <Image src={app} width="30%"></Image>
                                     <Card.Body>
-                                        <Card.Title>App Development</Card.Title>
+                                        <Card.Title style={{ color: "#195e83" }}>App Development</Card.Title>
                                         <Card.Text>
-                                        Details About App Development
+                                            Details About App Development
                                         </Card.Text>
                                         <div id="container">
-                                            <button class="learn-more">
+                                            <button class="learn-more" onClick={this.AppDevelopmentComponent}>
                                                 <span class="circle" aria-hidden="true">
                                                     <span class="icon arrow"></span>
                                                 </span>
@@ -82,12 +98,12 @@ class HomeComponent extends Component {
                                 <div style={{ textAlign: "center", marginTop: "5%" }}>
                                     <Image src={digital} width="30%"></Image>
                                     <Card.Body>
-                                        <Card.Title >Digital Marketing</Card.Title>
+                                        <Card.Title style={{ color: "#195e83" }}>Digital Marketing</Card.Title>
                                         <Card.Text>
-                                        Details About Digital Marketing
+                                            Details About Digital Marketing
                                         </Card.Text>
                                         <div id="container">
-                                            <button class="learn-more">
+                                            <button class="learn-more" onClick={this.DigitalMarketingComponent}>
                                                 <span class="circle" aria-hidden="true">
                                                     <span class="icon arrow"></span>
                                                 </span>

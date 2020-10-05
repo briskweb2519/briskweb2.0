@@ -3,6 +3,7 @@ import fb from '../Images/facebook.png'
 import instagram from '../Images/instagram.png'
 import linkedin from '../Images/linkedin.png'
 import Image from 'react-bootstrap/Image'
+// import { Link } from 'react-router-dom'
 class FooterComponent extends Component {
     // constructor(props){
     //     super(props)
@@ -10,7 +11,7 @@ class FooterComponent extends Component {
     render() {
         return (
             <>
-                <div style={{ backgroundColor: "#195e83", height: "30%", textAlign: "center" }}>
+                <div style={{ backgroundColor: "#195e83", textAlign: "center" }}>
                     <br />
                     <h3 style={{ color: "white" }}>Quick Links</h3>
                     <br />
@@ -18,9 +19,9 @@ class FooterComponent extends Component {
                     <Image src={instagram} width="30px"></Image>&nbsp;
                     <Image src={linkedin} width="30px"></Image>
                     <br /><br />
-                    <h6 style={{ color: "white" }}>Copyright 2020 &#169; Briskweb</h6>
+                    <h6 style={{ color: "white",paddingBottom:"2%"}}>Copyright 2020 &#169; Briskweb</h6>
 
-                    <a class="scroll-up text-center" href="/">
+                    {/* <Link class="scroll-up text-center" to="/">
                         <span class="left-bar"></span>
                         <span class="right-bar"></span>
                         <svg width="40" height="40">
@@ -29,7 +30,7 @@ class FooterComponent extends Component {
                             <line class="bottom" x1="40" y1="40" x2="-80" y2="40" />
                             <line class="right" x1="40" y1="0" x2="40" y2="1200" />
                         </svg>
-                    </a>
+                    </Link> */}
 
                     {/* <a class="arrow-up">
                     <span class="left-arm"></span>

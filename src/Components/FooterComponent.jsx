@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import fb from '../Images/facebook.png'
-import instagram from '../Images/instagram.png'
-import linkedin from '../Images/linkedin.png'
 import Image from 'react-bootstrap/Image'
 // import { Link } from 'react-router-dom'
 class FooterComponent extends Component {
@@ -15,9 +12,9 @@ class FooterComponent extends Component {
                     <br />
                     <h3 style={{ color: "white" }}>Quick Links</h3>
                     <br />
-                    <Image src={fb} width="30px"></Image>&nbsp;
-                    <Image src={instagram} width="30px"></Image>&nbsp;
-                    <Image src={linkedin} width="30px"></Image>
+                    <Image src="/Images/facebook.png" width="30px"></Image>&nbsp;
+                    <Image src="/Images/instagram.png" width="30px"></Image>&nbsp;
+                    <Image src="/Images/linkedin.png" width="30px"></Image>
                     <br /><br />
                     <h6 style={{ color: "white",paddingBottom:"2%"}}>Copyright 2020 &#169; Briskweb</h6>
 

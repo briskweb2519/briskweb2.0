@@ -4,16 +4,31 @@ import { Image } from 'react-bootstrap';
 
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
-import laptop from '../Images/pc.png'
-import web from '../Images/web.png'
 
-class DigitalMarketingComponent extends Component {
+class ServiceExploreComponent extends Component {
 
     constructor(props) {
         super(props)
 
         this.ContactComponent = this.ContactComponent.bind(this)
         this.ProjectComponent = this.ProjectComponent.bind(this)
+
+        this.state={
+            serviceName : "",
+            serviceSummary : "",
+            serviceDetails : "",
+            serviceImage : ""
+        }
+    }
+
+    componentDidMount(){
+        console.log(this.props.history.location.state.details);
+        this.setState({
+            serviceName : this.props.history.location.state.serviceName,
+            serviceSummary : this.props.history.location.state.serviceSummary,
+            serviceDetails : this.props.history.location.state.serviceDetails,
+            serviceImage : this.props.history.location.state.serviceImage,
+        })
     }
 
     ContactComponent() {
@@ -32,24 +47,21 @@ class DigitalMarketingComponent extends Component {
                         <div class="col-md-8">
                             <Card className="mb-5">
                                 <Card.Body>
-                                    <Card.Title style={{ color: "#195e83" }}>Digital Marketing</Card.Title>
+                                    <Card.Title style={{ color: "#195e83" }}>{this.state.serviceName}</Card.Title>
                                     <Card.Text>
-                                        Simplicity is one of the golden rules of website design. The audience should have an enjoyable, positive experience when using your website. Whether their objective is reading content, watching a video or enrolling in a course, every action should be clear and concise throughout the website. Our approach is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.
-                                    <img src={laptop} alt="" className="mt-5 ml-5 mb-5" width="75%" /><br />
-                                    The website design process starts with a pen and paper to sketch page layouts, wire-frames, sitemaps and menu structures. Digital design concepts are then created incorporating your company’s brand guidelines for a personalised look and feel. You will be presented with a variety of website design concepts to review. Feedback on the design concepts is essential to give you the opportunity to express your thoughts on the design and make alterations where desired before the final sign-off.
+                                        {this.state.serviceDetails}
                                 </Card.Text>
-
                                 </Card.Body>
                             </Card>
                         </div>
                         <div class="col-md-4">
                             <Card className="mb-3">
                                 <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={web} width="30%"></Image>
+                                    <Image src={this.state.serviceImage} width="30%"></Image>
                                     <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>Digital Marketing</Card.Title>
+                                        <Card.Title style={{ color: "#195e83" }}>{this.state.serviceName}</Card.Title>
                                         <Card.Text>
-                                            Details About Digital Marketing
+                                            {this.state.serviceSummary}
                                         </Card.Text>
                                         <div id="container">
                                             <button class="learn-more" onClick={this.ContactComponent}>
@@ -86,4 +98,4 @@ class DigitalMarketingComponent extends Component {
     }
 }
 
-export default DigitalMarketingComponent
+export default ServiceExploreComponent

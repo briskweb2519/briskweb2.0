@@ -4,225 +4,91 @@ import Card from 'react-bootstrap/Card'
 import CardColumns from 'react-bootstrap/CardColumns'
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Image } from 'react-bootstrap';
-import web from '../Images/web.png'
-import app from '../Images/app.png'
-import digital from '../Images/digital.png'
 
 class ServicesComponent extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
-        this.WebDevelopmentComponent = this.WebDevelopmentComponent.bind(this)
-        this.AppDevelopmentComponent = this.AppDevelopmentComponent.bind(this)
-        this.DigitalMarketingComponent = this.DigitalMarketingComponent.bind(this)
+        this.WebDevelopment = this.WebDevelopment.bind(this)
+        this.AppDevelopment = this.AppDevelopment.bind(this)
+        this.DigitalMarketing = this.DigitalMarketing.bind(this)
+
+        this.state = {
+            services: [
+                {
+                    component: "WebDevelopment",
+                    serviceName: "Web Development",
+                    serviceSummary: "Summary about Web Development",
+                    serviceDetails: "Details about Web Development",
+                    serviceImage: '/Images/web.png'
+                },
+                {
+                    component: "AppDevelopment",
+                    serviceName: "App Development",
+                    serviceSummary: "Summary about App Development",
+                    serviceDetails: "Details about App Development",
+                    serviceImage: '/Images/app.png'
+                },
+                {
+                    component: "DigitalMarketing",
+                    serviceName: "Digital Marketing",
+                    serviceSummary: "Summary about Digital Marketing",
+                    serviceDetails: "Details about Digital Marketing",
+                    serviceImage: '/Images/digital.png'
+                }
+            ]
+        }
     }
 
-    WebDevelopmentComponent(){
-        this.props.history.push('/services/webdevelopment')
+    WebDevelopment() {
+        this.props.history.push({
+            pathname: '/services/explore',
+            state: this.state.services[0]
+        })
     }
 
-    AppDevelopmentComponent(){
-        this.props.history.push('/services/appdevelopment')
+    AppDevelopment() {
+        this.props.history.push({
+            pathname: '/services/explore',
+            state: this.state.services[1]
+        })
     }
 
-    DigitalMarketingComponent(){
-        this.props.history.push('/services/digitalmarketing')
+    DigitalMarketing() {
+        this.props.history.push({
+            pathname: '/services/explore',
+            state: this.state.services[2]
+        })
     }
+
     render() {
         return (
             <>
                 <Container>
                     <CardColumns style={{ marginTop: "10%" }}>
-                        <ScrollAnimation animateIn="animate__animated animate__bounceInLeft">
-                            <Card>
-                                <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={web} width="30%"></Image>
-                                    <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>Web Development</Card.Title>
-                                        <Card.Text>
-                                            Details About Web Development
-                                        </Card.Text>
-                                        <div id="container">
-                                            <button class="learn-more" onClick={this.WebDevelopmentComponent}>
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
-                                                </span>
-                                                <span class="button-text">Explore</span>
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </div>
-                            </Card>
-                        </ScrollAnimation>
-                        <ScrollAnimation animateIn="animate__animated animate__bounceInRight">
-                            <Card>
-                                <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={app} width="30%"></Image>
-                                    <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>App Development</Card.Title>
-                                        <Card.Text>
-                                            Details About App Development
-                                        </Card.Text>
-                                        <div id="container">
-                                            <button class="learn-more">
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
-                                                </span>
-                                                <span class="button-text">Explore</span>
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </div>
-                            </Card>
-                        </ScrollAnimation>
-                        <ScrollAnimation animateIn="animate__animated animate__bounceInLeft">
-                            <Card>
-                                <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={digital} width="30%"></Image>
-                                    <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>Digital Marketing</Card.Title>
-                                        <Card.Text>
-                                            Details About Digital Marketing
-                                        </Card.Text>
-                                        <div id="container">
-                                            <button class="learn-more">
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
-                                                </span>
-                                                <span class="button-text">Explore</span>
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </div>
-                            </Card>
-                        </ScrollAnimation>
-                        <ScrollAnimation animateIn="animate__animated animate__bounceInLeft">
-                        <Card>
-                                <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={app} width="30%"></Image>
-                                    <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>App Development</Card.Title>
-                                        <Card.Text>
-                                            Details About App Development
-                                        </Card.Text>
-                                        <div id="container">
-                                            <button class="learn-more" onClick={this.AppDevelopmentComponent}>
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
-                                                </span>
-                                                <span class="button-text">Explore</span>
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </div>
-                            </Card>
-                        </ScrollAnimation>
-                        <ScrollAnimation animateIn="animate__animated animate__bounceInRight">
-                            <Card>
-                                <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={web} width="30%"></Image>
-                                    <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>Web Development</Card.Title>
-                                        <Card.Text>
-                                            Details About Web Development
-                                        </Card.Text>
-                                        <div id="container">
-                                            <button class="learn-more">
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
-                                                </span>
-                                                <span class="button-text">Explore</span>
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </div>
-                            </Card>
-                        </ScrollAnimation>
-                        <ScrollAnimation animateIn="animate__animated animate__bounceInLeft">
-                            <Card>
-                                <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={web} width="30%"></Image>
-                                    <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>Web Development</Card.Title>
-                                        <Card.Text>
-                                            Details About Web Development
-                                        </Card.Text>
-                                        <div id="container">
-                                            <button class="learn-more">
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
-                                                </span>
-                                                <span class="button-text">Explore</span>
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </div>
-                            </Card>
-                        </ScrollAnimation>
-                        <ScrollAnimation animateIn="animate__animated animate__bounceInLeft">
-                        <Card>
-                                <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={digital} width="30%"></Image>
-                                    <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>Digital Marketing</Card.Title>
-                                        <Card.Text>
-                                            Details About Digital Marketing
-                                        </Card.Text>
-                                        <div id="container">
-                                            <button class="learn-more" onClick={this.DigitalMarketingComponent}>
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
-                                                </span>
-                                                <span class="button-text">Explore</span>
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </div>
-                            </Card>
-                        </ScrollAnimation>
-                        <ScrollAnimation animateIn="animate__animated animate__bounceInRight">
-                            <Card>
-                                <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={web} width="30%"></Image>
-                                    <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>Web Development</Card.Title>
-                                        <Card.Text>
-                                            Details About Web Development
-                                        </Card.Text>
-                                        <div id="container">
-                                            <button class="learn-more">
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
-                                                </span>
-                                                <span class="button-text">Explore</span>
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </div>
-                            </Card>
-                        </ScrollAnimation>
-                        <ScrollAnimation animateIn="animate__animated animate__bounceInLeft">
-                            <Card>
-                                <div style={{ textAlign: "center", marginTop: "5%" }}>
-                                    <Image src={web} width="30%"></Image>
-                                    <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>Web Development</Card.Title>
-                                        <Card.Text>
-                                            Details About Web Development
-                                        </Card.Text>
-                                        <div id="container">
-                                            <button class="learn-more">
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
-                                                </span>
-                                                <span class="button-text">Explore</span>
-                                            </button>
-                                        </div>
-                                    </Card.Body>
-                                </div>
-                            </Card>
-                        </ScrollAnimation>
-
+                        {this.state.services.map(service =>
+                            <ScrollAnimation animateIn="animate__animated animate__bounceInLeft">
+                                <Card>
+                                    <div style={{ textAlign: "center", marginTop: "5%" }}>
+                                        <Image src={service.serviceImage} width="30%"></Image>
+                                        <Card.Body>
+                                            <Card.Title style={{ color: "#195e83" }}>{service.serviceName}</Card.Title>
+                                            <Card.Text>
+                                                {service.serviceSummary}
+                                            </Card.Text>
+                                            <div id="container">
+                                                <button class="learn-more" onClick={this[service.component]}>
+                                                    <span class="circle" aria-hidden="true">
+                                                        <span class="icon arrow"></span>
+                                                    </span>
+                                                    <span class="button-text">Explore</span>
+                                                </button>
+                                            </div>
+                                        </Card.Body>
+                                    </div>
+                                </Card>
+                            </ScrollAnimation>
+                        )}
                     </CardColumns>
                 </Container>
             </>

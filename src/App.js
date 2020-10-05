@@ -12,9 +12,7 @@ import ServiceDetailComponent from './Components/ServiceDetailComponent'
 import ProjectDetailComponent from './Components/ProjectDetailComponent'
 import AboutComponent from './Components/AboutComponent'
 import ProjectDiscussComponent from './Components/ProjectDiscussComponent'
-import WebDevelopmentComponent from './Components/WebDevelopmentComponent'
-import AppDevelopmentComponent from './Components/AppDevelopmentComponent'
-import DigitalMarketingComponent from './Components/DigitalMarketingComponent'
+import ServiceExploreCoponent from './Components/ServiceExploreCoponent'
 
 function App() {
   return (
@@ -30,9 +28,7 @@ function App() {
           <Route path="/project-details" component={ProjectDetailComponent} />
           <Route path="/service-details" component={ServiceDetailComponent} />
           <Route path="/project-discuss" component={ProjectDiscussComponent} />
-          <Route path="/services/webdevelopment" component={WebDevelopmentComponent} />
-          <Route path="/services/appdevelopment" component={AppDevelopmentComponent} />
-          <Route path="/services/digitalmarketing" component={DigitalMarketingComponent} />
+          <Route path="/services/explore" component={ServiceExploreCoponent} />
         </Switch>
         <FooterComponent />
       </Router>

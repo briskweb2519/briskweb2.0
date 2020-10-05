@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
-import img from 'E:/Project/briskweb/src/Images/69.jpg'
+import img from '../Images/69.jpg'
 
 class ProjectComponent extends Component {
     constructor(props){

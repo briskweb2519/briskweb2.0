@@ -1,24 +1,20 @@
 import React, { Component } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
-// import logo from '../Images/logo.png'
+import { Link } from 'react-router-dom'
+
 class HeaderComponent extends Component {
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
     render() {
         return (
             <>
                 <Navbar sticky="top" collapseOnSelect expand="lg" className="p-3" style={{backgroundColor:"white"}}>
                     <Container>
 
-                        {/* <Image src={logo} width='10%' rounded className="img-fluid z-depth-1 wow tada" data-wow-delay="0.2s" /> */}
-                        {/* <div class="wrapper"> */}
                         <h3 style={{ color: "#195e83" }}>BRISKWEB</h3>
-                        {/* </div> */}
                         <Navbar.Toggle class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="icon-bar top-bar"></span>
                             <span class="icon-bar middle-bar"></span>
@@ -27,16 +23,13 @@ class HeaderComponent extends Component {
 
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ml-auto text-center">
-                                <Nav.Link href="/" style={{ color: "#195e83" }}>Home</Nav.Link>
-                                <Nav.Link href="/services" style={{ color: "#195e83" }}>Services</Nav.Link>
-                                <Nav.Link href="/project" style={{ color: "#195e83" }}>Projects</Nav.Link>
-                                <Nav.Link href="/about" style={{ color: "#195e83" }}>About</Nav.Link>
-                                {/* <Nav.Link href="#Technology" style={{ color: "#195e83" }}>Technology</Nav.Link> */}
-                                <Button variant="primary" style={{ backgroundColor: "#195e83",textDecoration:"none"}} href="/contact">Contact</Button >
-                                {/* <Nav.Link href="#Contact" style={{ color: "black" }}>Contact</Nav.Link> */}
+                                <Link className="nav-link" to="/" style={{ color: "#195e83" }}>Home</Link>
+                                <Link className="nav-link" to="/services" style={{ color: "#195e83" }}>Services</Link>
+                                <Link className="nav-link" to="/project" style={{ color: "#195e83" }}>Projects</Link>
+                                <Link className="nav-link" to="/about" style={{ color: "#195e83" }}>About</Link>
+                                <Link className="nav-link" to="/contact" style={{ color: "#195e83" }}>Contact</Link >
                             </Nav>
                         </Navbar.Collapse>
-
                     </Container>
                 </Navbar>
             </>

@@ -4,9 +4,9 @@ import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
 
 class ProjectDiscussComponent extends Component {
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
     render() {
         return (
             <>

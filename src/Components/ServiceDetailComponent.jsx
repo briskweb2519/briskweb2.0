@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import { CardColumns } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 import laptop from '../Images/pc.png'
 class ServiceDetailComponent extends Component {
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
     render() {
         return (
             <>

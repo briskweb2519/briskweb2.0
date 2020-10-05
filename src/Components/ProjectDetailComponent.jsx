@@ -1,11 +1,37 @@
 import React, { Component } from 'react'
+import { Image } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 
 class ProjectDetailComponent extends Component {
-    // constructor(props){
-    //     super(props)
-    // }
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            name: "",
+            summary: "",
+            image: "",
+            serviceName: "",
+            url: "",
+            serviceProvided: []
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            name: this.props.history.location.state.name,
+            summary: this.props.history.location.state.summary,
+            image: this.props.history.location.state.image,
+            serviceName: this.props.history.location.state.serviceName,
+            url: this.props.history.location.state.url,
+            serviceProvided: this.props.history.location.state.serviceProvided
+        })
+    }
+
+    changeRoute(url) {
+        window.location.href = url;
+    }
+
     render() {
         return (
             <>
@@ -13,54 +39,40 @@ class ProjectDetailComponent extends Component {
                     <div class="row">
                         <div class="col-md-8">
                             <Card className="mb-5">
-                                {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
                                 <Card.Body>
-                                    <Card.Title>Website Design — Creating the look & feel of your website</Card.Title>
+                                    <Card.Title>{this.state.name}</Card.Title>
                                     <Card.Text>
-                                        Simplicity is one of the golden rules of website design. The audience should have an enjoyable, positive experience when using your website. Whether their objective is reading content, watching a video or enrolling in a course, every action should be clear and concise throughout the website. Our approach is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.
-                                    <img src="/Images/pc.png" alt="" className="mt-5 ml-5 mb-5" width="75%" /><br />
-                                    The website design process starts with a pen and paper to sketch page layouts, wire-frames, sitemaps and menu structures. Digital design concepts are then created incorporating your company’s brand guidelines for a personalised look and feel. You will be presented with a variety of website design concepts to review. Feedback on the design concepts is essential to give you the opportunity to express your thoughts on the design and make alterations where desired before the final sign-off.
-                                </Card.Text>
-
+                                        {this.state.summary}
+                                    </Card.Text>
                                 </Card.Body>
                             </Card>
                         </div>
                         <div class="col-md-4">
                             <Card className="mb-5">
-                                {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
                                 <Card.Body>
-                                    <Card.Title>Website Design — Creating the look & feel of your website</Card.Title>
+                                    <Card.Title>{this.state.name}</Card.Title>
                                     <Card.Text>
-                                        This is a longer card with supporting text below as a natural lead-in to
-                                        additional content. This content is a little bit longer.
-                                </Card.Text>
+                                        {this.state.summary}
+                                    </Card.Text>
                                     <div id="container">
-                                        <button class="learn-more">
+                                        <button class="learn-more" onClick={()=>this.changeRoute(this.state.url)}>
                                             <span class="circle" aria-hidden="true">
                                                 <span class="icon arrow"></span>
                                             </span>
-                                            <span class="button-text">Learn More</span>
+                                            <span class="button-text">Visit Website</span>
                                         </button>
+
                                     </div>
                                 </Card.Body>
                             </Card>
                             <Card className="mb-5">
-                                {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
                                 <Card.Body>
-                                    <Card.Title>Card title that wraps to a new line</Card.Title>
+                                    <Card.Title>Services Provided</Card.Title>
                                     <Card.Text>
-                                        This is a longer card with supporting text below as a natural lead-in to
-                                        additional content. This content is a little bit longer.
-                        </Card.Text>
-                                    <div id="container">
-                                        <button class="learn-more">
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
-                                            </span>
-                                            <span class="button-text">Learn More</span>
-                                        </button>
-                                    </div>
-
+                                        {this.state.serviceProvided.map(serve =>
+                                            <div><Image src={serve.image} style={{ width: "10%" }}></Image> {serve.name}</div>
+                                        )}
+                                    </Card.Text>
                                 </Card.Body>
                             </Card>
                         </div>

@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container'
 import laptop from '../Images/pc.png'
 import web from '../Images/web.png'
 
-class WebDevelopmentComponent extends Component {
+class AppDevelopmentComponent extends Component {
 
     constructor(props) {
         super(props)
@@ -32,7 +32,7 @@ class WebDevelopmentComponent extends Component {
                         <div class="col-md-8">
                             <Card className="mb-5">
                                 <Card.Body>
-                                    <Card.Title style={{ color: "#195e83" }}>Web Deveolpment</Card.Title>
+                                    <Card.Title style={{ color: "#195e83" }}>App Deveolpment</Card.Title>
                                     <Card.Text>
                                         Simplicity is one of the golden rules of website design. The audience should have an enjoyable, positive experience when using your website. Whether their objective is reading content, watching a video or enrolling in a course, every action should be clear and concise throughout the website. Our approach is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience.
                                     <img src={laptop} alt="" className="mt-5 ml-5 mb-5" width="75%" /><br />
@@ -47,9 +47,9 @@ class WebDevelopmentComponent extends Component {
                                 <div style={{ textAlign: "center", marginTop: "5%" }}>
                                     <Image src={web} width="30%"></Image>
                                     <Card.Body>
-                                        <Card.Title style={{ color: "#195e83" }}>Web Development</Card.Title>
+                                        <Card.Title style={{ color: "#195e83" }}>App Development</Card.Title>
                                         <Card.Text>
-                                            Details About Web Development
+                                            Details About App Development
                                         </Card.Text>
                                         <div id="container">
                                             <button class="learn-more" onClick={this.ContactComponent}>
@@ -86,4 +86,4 @@ class WebDevelopmentComponent extends Component {
     }
 }
 
-export default WebDevelopmentComponent
+export default AppDevelopmentComponent

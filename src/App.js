@@ -13,6 +13,8 @@ import ProjectDetailComponent from './Components/ProjectDetailComponent'
 import AboutComponent from './Components/AboutComponent'
 import ProjectDiscussComponent from './Components/ProjectDiscussComponent'
 import WebDevelopmentComponent from './Components/WebDevelopmentComponent'
+import AppDevelopmentComponent from './Components/AppDevelopmentComponent'
+import DigitalMarketingComponent from './Components/DigitalMarketingComponent'
 
 function App() {
   return (
@@ -29,8 +31,8 @@ function App() {
           <Route path="/service-details" component={ServiceDetailComponent} />
           <Route path="/project-discuss" component={ProjectDiscussComponent} />
           <Route path="/services/webdevelopment" component={WebDevelopmentComponent} />
-          <Route path="/services/appdevelopment" component={ProjectDiscussComponent} />
-          <Route path="/services/digitalmarketing" component={ProjectDiscussComponent} />
+          <Route path="/services/appdevelopment" component={AppDevelopmentComponent} />
+          <Route path="/services/digitalmarketing" component={DigitalMarketingComponent} />
         </Switch>
         <FooterComponent />
       </Router>

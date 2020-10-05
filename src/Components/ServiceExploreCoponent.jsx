@@ -22,7 +22,6 @@ class ServiceExploreComponent extends Component {
     }
 
     componentDidMount(){
-        console.log(this.props.history.location.state.details);
         this.setState({
             serviceName : this.props.history.location.state.serviceName,
             serviceSummary : this.props.history.location.state.serviceSummary,
@@ -36,7 +35,10 @@ class ServiceExploreComponent extends Component {
     }
 
     ProjectComponent() {
-        this.props.history.push('/project')
+        this.props.history.push({
+            pathname: '/project',
+            state: this.state.serviceName
+        })
     }
 
     render() {

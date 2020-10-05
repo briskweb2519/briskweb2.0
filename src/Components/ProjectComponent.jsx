@@ -14,17 +14,20 @@ class ProjectComponent extends Component {
                 {
                     name: "CarWash Application",
                     summary: "Yeh to boom karega",
-                    image: "/Images/69.jpg"
+                    image: "/Images/69.jpg",
+                    serviceName: "App Development"
                 },
                 {
-                    name: "CarWash Application",
+                    name: "Speedwell",
                     summary: "Yeh to boom karega",
-                    image: "/Images/69.jpg"
+                    image: "/Images/69.jpg",
+                    serviceName: "Web Development"
                 },
                 {
-                    name: "CarWash Application",
+                    name: "Nutan Vastra Bhandar",
                     summary: "Yeh to boom karega",
-                    image: "/Images/69.jpg"
+                    image: "/Images/69.jpg",
+                    serviceName: "Web Development"
                 }
             ]
         }
@@ -40,7 +43,11 @@ class ProjectComponent extends Component {
                 <Container>
                     <div>
                         <CardDeck style={{ width: "100%" }}>
-                            {this.state.projects.map(project =>
+                            {this.state.projects.filter((project) => {
+                                if (project.serviceName === this.props.history.location.state) {
+                                    return project
+                                }
+                            }).map(project =>
                                 <div class="frame">
                                     <Card style={{ width: "100%", height: "400px", marginTop: "15px", marginBottom: "15px" }} >
                                         <Card.Img variant="top" src={project.image} />

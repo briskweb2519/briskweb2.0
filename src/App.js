@@ -20,7 +20,7 @@ function App() {
       <Router>
         <HeaderComponent />
         <Switch>
-          <Route path='/' exact component={HomeComponent} />
+          <Route path='/briskweb2.0' exact component={HomeComponent} />
           <Route path="/services" exact component={ServicesComponent} />
           <Route path="/project" component={ProjectComponent} />
           <Route path="/about" component={AboutComponent} />

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d949f37cc0b17e50c45d7737e0fafd23",
+    "revision": "6ed37dc1ae677ee431c22ad23cc24c27",
     "url": "/briskweb2.0/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/briskweb2.0/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "382a2f2ea3896f7cac6f",
+    "revision": "4ea001e6af2849d6531a",
     "url": "/briskweb2.0/static/css/main.1d1cff36.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/briskweb2.0/static/js/2.61f990a6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "382a2f2ea3896f7cac6f",
-    "url": "/briskweb2.0/static/js/main.a2926b6a.chunk.js"
+    "revision": "4ea001e6af2849d6531a",
+    "url": "/briskweb2.0/static/js/main.4a6083f1.chunk.js"
   },
   {
     "revision": "01fb0c5a33a08a2d9e50",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/briskweb2.0/precache-manifest.1f724f78e6e53b26d96d2618896de8b1.js"
+  "/briskweb2.0/precache-manifest.1c5b375181587f5612707e61d717138f.js"
 );
 
 self.addEventListener('message', (event) => {

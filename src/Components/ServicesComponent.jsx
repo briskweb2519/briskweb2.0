@@ -18,21 +18,21 @@ class ServicesComponent extends Component {
                 {
                     component: "WebDevelopment",
                     serviceName: "Web Development",
-                    serviceSummary: "Summary about Web Development",
+                    serviceSummary: "Our aim is to develop websites that not only increases your retention rate but also the overall performance and aesthetics.",
                     serviceDetails: "Details about Web Development",
                     serviceImage: '/Images/web.png'
                 },
                 {
                     component: "AppDevelopment",
                     serviceName: "App Development",
-                    serviceSummary: "Summary about App Development",
+                    serviceSummary: "We create apps that speaks myriad about your business idea. It helps connect people with your idea and thereby benefits both.",
                     serviceDetails: "Details about App Development",
                     serviceImage: '/Images/app.png'
                 },
                 {
                     component: "DigitalMarketing",
                     serviceName: "Digital Marketing",
-                    serviceSummary: "Summary about Digital Marketing",
+                    serviceSummary: "We use modern tools in a manner that helps build effective brand recognition and plan further actions to improve user experience.",
                     serviceDetails: "Details about Digital Marketing",
                     serviceImage: '/Images/digital.png'
                 }

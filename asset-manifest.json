@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/briskweb2.0/static/css/main.1d1cff36.chunk.css",
-    "main.js": "/briskweb2.0/static/js/main.4a6083f1.chunk.js",
-    "main.js.map": "/briskweb2.0/static/js/main.4a6083f1.chunk.js.map",
+    "main.js": "/briskweb2.0/static/js/main.b9c88eeb.chunk.js",
+    "main.js.map": "/briskweb2.0/static/js/main.b9c88eeb.chunk.js.map",
     "runtime-main.js": "/briskweb2.0/static/js/runtime-main.f5449b44.js",
     "runtime-main.js.map": "/briskweb2.0/static/js/runtime-main.f5449b44.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/briskweb2.0/static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.61f990a6.chunk.js": "/briskweb2.0/static/js/2.61f990a6.chunk.js",
     "static/js/2.61f990a6.chunk.js.map": "/briskweb2.0/static/js/2.61f990a6.chunk.js.map",
     "index.html": "/briskweb2.0/index.html",
-    "precache-manifest.1c5b375181587f5612707e61d717138f.js": "/briskweb2.0/precache-manifest.1c5b375181587f5612707e61d717138f.js",
+    "precache-manifest.234dddcf1b173553c2184fcf3fe9385d.js": "/briskweb2.0/precache-manifest.234dddcf1b173553c2184fcf3fe9385d.js",
     "service-worker.js": "/briskweb2.0/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/briskweb2.0/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.1d1cff36.chunk.css.map": "/briskweb2.0/static/css/main.1d1cff36.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.61f990a6.chunk.js",
     "static/css/main.1d1cff36.chunk.css",
-    "static/js/main.4a6083f1.chunk.js"
+    "static/js/main.b9c88eeb.chunk.js"
   ]
 }

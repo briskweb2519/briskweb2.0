@@ -1,3 +1,7 @@
+.display-linebreak {
+  white-space: pre-line;
+}
+
 a:hover{
     border-bottom: 3px solid #195e83;
     /* color: ; */

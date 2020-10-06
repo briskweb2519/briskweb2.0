@@ -50,7 +50,7 @@ class ServiceExploreComponent extends Component {
                             <Card className="mb-5">
                                 <Card.Body>
                                     <Card.Title style={{ color: "#195e83" }}>{this.state.serviceName}</Card.Title>
-                                    <Card.Text>
+                                    <Card.Text className="display-linebreak">
                                         {this.state.serviceDetails}
                                 </Card.Text>
                                 </Card.Body>

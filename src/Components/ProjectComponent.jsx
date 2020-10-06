@@ -15,14 +15,46 @@ class ProjectComponent extends Component {
             projects: [
                 {
                     name: "CarWash Application",
-                    summary: "Yeh to boom karega",
+                    summary: "Carwash application solves the business problem of connecting the workers , customers and the service provider seamlessly for an efficient and affordable car service experience.",
+                    details: `This project is about automating registration of car washing service with a user-friendly hybrid application.
+
+                    It aims to improve the overall experience of that service by providing functionalities like tracking of job, feedback mechanisms, flexibility in the selection of service and many more.
+                    
+                    This mode uses subscription-based services where one has the option to select from various plans.
+                    
+                    It also aims to improve the process by reducing the usage of water and inculcating better techniques into the process.
+                    
+                    So this application aims to provide a timely service that is available at affordable rates and more eco-friendly.
+                    
+                    It also aims for better management of resources and effective communication between various users of the platform.
+                    `,
                     image: "/Images/69.jpg",
                     serviceName: "App Development",
                     url: "https://www.briskweb.in",
                     serviceProvided: [
                         {
-                            image: "/Images/web.png",
-                            name: "Web design"
+                            image: "/Images/ionic.png",
+                            name: "Ionic",
+                        },
+                        {
+                            image: "/Images/angular.png",
+                            name: "AngularJS",
+                        },
+                        {
+                            image: "/Images/node.png",
+                            name: "NodeJS",
+                        },
+                        {
+                            image: "/Images/mongo.png",
+                            name: "MongoDB",
+                        },
+                        {
+                            image: "/Images/firebase.png",
+                            name: "Firebase",
+                        },
+                        {
+                            image: "/Images/heroku.png",
+                            name: "Heroku",
                         }
                     ],
                     fun: "CarWash"
@@ -30,29 +62,47 @@ class ProjectComponent extends Component {
 
                 {
                     name: "Speedwell",
-                    summary: "Yeh to boom karega",
+                    summary: "Speedwell Cycle Industries is a company which owns the wholesale supply of various companies of sports goods and automobile tyre-tubes.",
+                    details: "",
                     image: "/Images/69.jpg",
                     serviceName: "Web Development",
                     url: "https://www.speedwells.in",
                     serviceProvided: [
                         {
-                            image: "/Images/web.png",
-                            name: "Web design"
-                        }
+                            image: "/Images/react.jpg",
+                            name: "ReactJS",
+                        },
+                        {
+                            image: "/Images/github.jpg",
+                            name: "Github",
+                        },
                     ],
                     fun: "Speedwell"
                 },
-                
+
                 {
                     name: "Nutan Vastra Bhandar",
-                    summary: "Yeh to boom karega",
+                    summary: "Nutan Vastra Bhandar owns a manufacturing, designing, and selling of sarees, kurtis, and various tradditional garments. It tops the market for 86 years.",
+                    details: "",
                     image: "/Images/69.jpg",
                     serviceName: "Web Development",
                     url: "https://www.briskweb.in",
                     serviceProvided: [
                         {
-                            image: "/Images/web.png",
-                            name: "Web design"
+                            image: "/Images/react.jpg",
+                            name: "ReactJS",
+                        },
+                        {
+                            image: "/Images/node.png",
+                            name: "NodeJS",
+                        },
+                        {
+                            image: "/Images/mongo.png",
+                            name: "MongoDB",
+                        },
+                        {
+                            image: "/Images/heroku.png",
+                            name: "Heroku",
                         }
                     ],
                     fun: "Nutan"

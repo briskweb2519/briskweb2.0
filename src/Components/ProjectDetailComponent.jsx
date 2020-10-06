@@ -10,6 +10,7 @@ class ProjectDetailComponent extends Component {
         this.state = {
             name: "",
             summary: "",
+            details : "",
             image: "",
             serviceName: "",
             url: "",
@@ -21,6 +22,7 @@ class ProjectDetailComponent extends Component {
         this.setState({
             name: this.props.history.location.state.name,
             summary: this.props.history.location.state.summary,
+            details : this.props.history.location.state.details,
             image: this.props.history.location.state.image,
             serviceName: this.props.history.location.state.serviceName,
             url: this.props.history.location.state.url,
@@ -40,9 +42,9 @@ class ProjectDetailComponent extends Component {
                         <div class="col-md-8">
                             <Card className="mb-5">
                                 <Card.Body>
-                                    <Card.Title>{this.state.name}</Card.Title>
-                                    <Card.Text>
-                                        {this.state.summary}
+                                    <Card.Title style={{ color: "#195e83" }}>{this.state.name}</Card.Title>
+                                    <Card.Text className="display-linebreak">
+                                        {this.state.details}
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -50,7 +52,7 @@ class ProjectDetailComponent extends Component {
                         <div class="col-md-4">
                             <Card className="mb-5">
                                 <Card.Body>
-                                    <Card.Title>{this.state.name}</Card.Title>
+                                    <Card.Title style={{ color: "#195e83" }}>{this.state.name}</Card.Title>
                                     <Card.Text>
                                         {this.state.summary}
                                     </Card.Text>
@@ -67,10 +69,10 @@ class ProjectDetailComponent extends Component {
                             </Card>
                             <Card className="mb-5">
                                 <Card.Body>
-                                    <Card.Title>Services Provided</Card.Title>
+                                    <Card.Title style={{ color: "#195e83" }}>Tools/Services</Card.Title>
                                     <Card.Text>
                                         {this.state.serviceProvided.map(serve =>
-                                            <div><Image src={serve.image} style={{ width: "10%" }}></Image> {serve.name}</div>
+                                            <div><Image src={serve.image} style={{ width: "10%" }}></Image> {serve.name}<br/><br/></div>
                                         )}
                                     </Card.Text>
                                 </Card.Body>

@@ -12,8 +12,8 @@ class FooterComponent extends Component {
                     <br />
                     <h3 style={{ color: "white" }}>Quick Links</h3>
                     <br />
-                    <Image src="/Images/facebook.png" width="30px"></Image>&nbsp;
-                    <Image src="/Images/instagram.png" width="30px"></Image>&nbsp;
+                    <Image src="/Images/facebook.png" width="30px" ></Image>&nbsp;
+                    <a href="https://www.instagram.com/briskweb/"><Image src="/Images/instagram.png" width="30px"></Image></a>&nbsp;
                     <Image src="/Images/linkedin.png" width="30px"></Image>
                     <br /><br />
                     <h6 style={{ color: "white",paddingBottom:"2%"}}>Copyright 2020 &#169; Briskweb</h6>

@@ -5,9 +5,9 @@ import CardColumns from 'react-bootstrap/CardColumns'
 import ScrollAnimation from 'react-animate-on-scroll';
 
 class ServicesComponent extends Component {
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
     render() {
         return (
             <>

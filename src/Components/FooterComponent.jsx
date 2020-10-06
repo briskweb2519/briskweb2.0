@@ -4,20 +4,23 @@ import instagram from '../Images/instagram.png'
 import linkedin from '../Images/linkedin.png'
 import Image from 'react-bootstrap/Image'
 class FooterComponent extends Component {
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
     render() {
         return (
             <>
                 <div style={{ backgroundColor: "#195e83", height: "30%", textAlign: "center" }}>
-                    <br /><h3 style={{ color: "white" }}>Quick Links</h3><br />
+                    <br />
+                    <h3 style={{ color: "white" }}>Quick Links</h3>
+                    <br />
                     <Image src={fb} width="30px"></Image>&nbsp;
-                <Image src={instagram} width="30px"></Image>&nbsp;
-                <Image src={linkedin} width="30px"></Image><br /><br />
+                    <Image src={instagram} width="30px"></Image>&nbsp;
+                    <Image src={linkedin} width="30px"></Image>
+                    <br /><br />
                     <h6 style={{ color: "white" }}>Copyright 2020 &#169; Briskweb</h6>
 
-                    <a class="scroll-up text-center">
+                    <a class="scroll-up text-center" href="/">
                         <span class="left-bar"></span>
                         <span class="right-bar"></span>
                         <svg width="40" height="40">

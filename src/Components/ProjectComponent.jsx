@@ -151,7 +151,7 @@ class ProjectComponent extends Component {
                                         <Card.Text>
                                             {project.summary}
                                         </Card.Text>
-                                        <button>Read More</button>
+                                        <button onClick={this[project.fun]}>Read More</button>
                                     </Card.Body>
                                 </Card>
                             </Col>

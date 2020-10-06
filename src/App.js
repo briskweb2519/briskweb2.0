@@ -12,6 +12,7 @@ import ServiceDetailComponent from './Components/ServiceDetailComponent'
 import ProjectDetailComponent from './Components/ProjectDetailComponent'
 import AboutComponent from './Components/AboutComponent'
 import ProjectDiscussComponent from './Components/ProjectDiscussComponent'
+import ServiceExploreCoponent from './Components/ServiceExploreCoponent'
 
 function App() {
   return (
@@ -19,14 +20,15 @@ function App() {
       <Router>
         <HeaderComponent />
         <Switch>
-          <Route path='/' exact component={HomeComponent} />
-          <Route path="/services" component={ServicesComponent} />
+          <Route path='/briskweb2.0' exact component={HomeComponent} />
+          <Route path="/services" exact component={ServicesComponent} />
           <Route path="/project" component={ProjectComponent} />
           <Route path="/about" component={AboutComponent} />
           <Route path="/contact" component={ContactComponent} />
           <Route path="/project-details" component={ProjectDetailComponent} />
           <Route path="/service-details" component={ServiceDetailComponent} />
           <Route path="/project-discuss" component={ProjectDiscussComponent} />
+          <Route path="/services/explore" component={ServiceExploreCoponent} />
         </Switch>
         <FooterComponent />
       </Router>

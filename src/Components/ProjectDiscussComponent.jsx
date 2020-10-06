@@ -11,9 +11,9 @@ class ProjectDiscussComponent extends Component {
         return (
             <>
                 <Container>
-                    <div class="row">
+                    <div className="row">
 
-                        <div class="col-md-12">
+                        <div className="col-md-12">
                             <Card className="mb-5">
                                 <div style={{ textAlign: "center", padding: "4%", backgroundColor: "#195e83", color: "white" }}>
                                     <h3>Let’s talk about your project</h3><br />
@@ -157,11 +157,11 @@ class ProjectDiscussComponent extends Component {
                                     <br />
 
                                     <div id="container">
-                                        <button class="learn-more">
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
+                                        <button className="learn-more">
+                                            <span className="circle" aria-hidden="true">
+                                                <span className="icon arrow"></span>
                                             </span>
-                                            <span class="button-text">Submit</span>
+                                            <span className="button-text">Submit</span>
                                         </button>
                                     </div>
                                 </Form>

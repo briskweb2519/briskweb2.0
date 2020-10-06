@@ -163,11 +163,11 @@ class HomeComponent extends Component {
                                                 {service.serviceSummary}
                                             </Card.Text>
                                             <div id="container">
-                                                <button class="learn-more" onClick={this[service.component]}>
-                                                    <span class="circle" aria-hidden="true">
-                                                        <span class="icon arrow"></span>
+                                                <button className="learn-more" onClick={this[service.component]}>
+                                                    <span className="circle" aria-hidden="true">
+                                                        <span className="icon arrow"></span>
                                                     </span>
-                                                    <span class="button-text">Explore</span>
+                                                    <span className="button-text">Explore</span>
                                                 </button>
                                             </div>
                                         </Card.Body>

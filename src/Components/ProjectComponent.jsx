@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { Container } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
-import CardDeck from 'react-bootstrap/CardDeck'
-
 
 class ProjectComponent extends Component {
     constructor(props) {
@@ -28,7 +26,7 @@ class ProjectComponent extends Component {
                     
                     It also aims for better management of resources and effective communication between various users of the platform.
                     `,
-                    image: "/Images/69.jpg",
+                    image: "https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
                     serviceName: "App Development",
                     url: "https://www.briskweb.in",
                     serviceProvided: [
@@ -64,7 +62,7 @@ class ProjectComponent extends Component {
                     name: "Speedwell",
                     summary: "Speedwell Cycle Industries is a company which owns the wholesale supply of various companies of sports goods and automobile tyre-tubes.",
                     details: "",
-                    image: "/Images/69.jpg",
+                    image: "https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
                     serviceName: "Web Development",
                     url: "https://www.speedwells.in",
                     serviceProvided: [
@@ -84,7 +82,7 @@ class ProjectComponent extends Component {
                     name: "Nutan Vastra Bhandar",
                     summary: "Nutan Vastra Bhandar owns a manufacturing, designing, and selling of sarees, kurtis, and various tradditional garments. It tops the market for 86 years.",
                     details: "",
-                    image: "/Images/69.jpg",
+                    image: "https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
                     serviceName: "Web Development",
                     url: "https://www.briskweb.in",
                     serviceProvided: [
@@ -106,7 +104,7 @@ class ProjectComponent extends Component {
                         }
                     ],
                     fun: "Nutan"
-                }
+                },
             ]
         }
     }
@@ -135,39 +133,30 @@ class ProjectComponent extends Component {
     render() {
         return (
             <>
-                <Container>
-                    <div>
-                        <CardDeck style={{ width: "100%" }}>
-                            {this.state.projects.filter((project) => {
-                                if (project.serviceName === this.props.history.location.state) {
-                                    return project
-                                }
-                                if (this.props.history.location.state === undefined) {
-                                    return this.state.projects
-                                }
-                            }).map(project =>
-                                <div class="frame">
-                                    <Card style={{ width: "100%", height: "400px", marginTop: "15px", marginBottom: "15px" }} >
-                                        <Card.Img variant="top" src={project.image} />
-                                        <Card.Body class="details" style={{ width: "80%" }}>
-                                            <Card.Title>{project.name}</Card.Title>
-                                            <Card.Text>
-                                                {project.summary}
-                                            </Card.Text>
-                                            <div id="container">
-                                                <button class="learn-more" onClick={this[project.fun]}>
-                                                    <span class="circle" aria-hidden="true">
-                                                        <span class="icon arrow"></span>
-                                                    </span>
-                                                    <span class="button-text">View Project</span>
-                                                </button>
-                                            </div>
-                                        </Card.Body>
-                                    </Card>
-                                </div>
-                            )}
-                        </CardDeck>
-                    </div>
+                <Container className="mb-5" style={{ width: "100%" }}>
+                    <Row >
+                        {this.state.projects.filter((project) => {
+                            if (project.serviceName === this.props.history.location.state) {
+                                return project
+                            }
+                            if (this.props.history.location.state === undefined) {
+                                return this.state.projects
+                            }
+                        }).map(project =>
+                            <Col className="mx-auto d-flex justify-content-center">
+                                <Card className="card1" style={{ height: "400px", marginTop: "15px", marginBottom: "15px" }} >
+                                    <Card.Img variant="top" src={project.image} />
+                                    <Card.Body className="info">
+                                        <Card.Title>{project.name}</Card.Title>
+                                        <Card.Text>
+                                            {project.summary}
+                                        </Card.Text>
+                                        <button>Read More</button>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        )}
+                    </Row>
                 </Container>
             </>
         )

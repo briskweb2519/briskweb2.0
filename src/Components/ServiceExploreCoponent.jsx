@@ -13,20 +13,20 @@ class ServiceExploreComponent extends Component {
         this.ContactComponent = this.ContactComponent.bind(this)
         this.ProjectComponent = this.ProjectComponent.bind(this)
 
-        this.state={
-            serviceName : "",
-            serviceSummary : "",
-            serviceDetails : "",
-            serviceImage : ""
+        this.state = {
+            serviceName: "",
+            serviceSummary: "",
+            serviceDetails: "",
+            serviceImage: ""
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.setState({
-            serviceName : this.props.history.location.state.serviceName,
-            serviceSummary : this.props.history.location.state.serviceSummary,
-            serviceDetails : this.props.history.location.state.serviceDetails,
-            serviceImage : this.props.history.location.state.serviceImage,
+            serviceName: this.props.history.location.state.serviceName,
+            serviceSummary: this.props.history.location.state.serviceSummary,
+            serviceDetails: this.props.history.location.state.serviceDetails,
+            serviceImage: this.props.history.location.state.serviceImage,
         })
     }
 
@@ -45,18 +45,18 @@ class ServiceExploreComponent extends Component {
         return (
             <>
                 <Container >
-                    <div class="row">
-                        <div class="col-md-8">
+                    <div className="row">
+                        <div className="col-md-8">
                             <Card className="mb-5">
                                 <Card.Body>
                                     <Card.Title style={{ color: "#195e83" }}>{this.state.serviceName}</Card.Title>
                                     <Card.Text className="display-linebreak">
                                         {this.state.serviceDetails}
-                                </Card.Text>
+                                    </Card.Text>
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div class="col-md-4">
+                        <div className="col-md-4">
                             <Card className="mb-3">
                                 <div style={{ textAlign: "center", marginTop: "5%" }}>
                                     <Image src={this.state.serviceImage} width="30%"></Image>
@@ -66,11 +66,11 @@ class ServiceExploreComponent extends Component {
                                             {this.state.serviceSummary}
                                         </Card.Text>
                                         <div id="container">
-                                            <button class="learn-more" onClick={this.ContactComponent}>
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
+                                            <button className="learn-more" onClick={this.ContactComponent}>
+                                                <span className="circle" aria-hidden="true">
+                                                    <span className="icon arrow"></span>
                                                 </span>
-                                                <span class="button-text">Enquire</span>
+                                                <span className="button-text">Enquire</span>
                                             </button>
                                         </div>
                                     </Card.Body>
@@ -78,20 +78,19 @@ class ServiceExploreComponent extends Component {
                             </Card>
 
                             <Card className="mb-3">
-                                <div style={{ textAlign: "center"}}>
+                                <div style={{ textAlign: "center" }}>
                                     <Card.Body>
                                         <div id="container">
-                                            <button class="learn-more" onClick={this.ProjectComponent}>
-                                                <span class="circle" aria-hidden="true">
-                                                    <span class="icon arrow"></span>
+                                            <button className="learn-more" onClick={this.ProjectComponent}>
+                                                <span className="circle" aria-hidden="true">
+                                                    <span className="icon arrow"></span>
                                                 </span>
-                                                <span class="button-text">Projects</span>
+                                                <span className="button-text">Projects</span>
                                             </button>
                                         </div>
                                     </Card.Body>
                                 </div>
                             </Card>
-
                         </div>
                     </div>
                 </Container>

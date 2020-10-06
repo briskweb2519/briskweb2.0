@@ -10,46 +10,42 @@ class AboutComponent extends Component {
         return (
             <>
                 <Container >
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div className="row">
+                        <div className="col-md-6">
                             <Card className="mb-5">
-                                {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
                                 <Card.Body>
                                     <Card.Title>Card title that wraps to a new line</Card.Title>
                                     <Card.Text>
                                         This is a longer card with supporting text below as a natural lead-in to
                                         additional content. This content is a little bit longer.
-                        </Card.Text>
+                                    </Card.Text>
                                     <div id="container">
-                                        <button class="learn-more">
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
+                                        <button className="learn-more">
+                                            <span className="circle" aria-hidden="true">
+                                                <span className="icon arrow"></span>
                                             </span>
-                                            <span class="button-text">Learn More</span>
+                                            <span className="button-text">Learn More</span>
                                         </button>
                                     </div>
-
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div class="col-md-6">
+                        <div className="col-md-6">
                             <Card className="mb-5">
-                                {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
                                 <Card.Body>
                                     <Card.Title>Card title that wraps to a new line</Card.Title>
                                     <Card.Text>
                                         This is a longer card with supporting text below as a natural lead-in to
                                         additional content. This content is a little bit longer.
-                        </Card.Text>
+                                    </Card.Text>
                                     <div id="container">
-                                        <button class="learn-more">
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
+                                        <button className="learn-more">
+                                            <span className="circle" aria-hidden="true">
+                                                <span className="icon arrow"></span>
                                             </span>
-                                            <span class="button-text">Learn More</span>
+                                            <span className="button-text">Learn More</span>
                                         </button>
                                     </div>
-
                                 </Card.Body>
                             </Card>
                         </div>

@@ -16,10 +16,10 @@ class HeaderComponent extends Component {
                     <Container>
 
                         <h3 style={{ color: "white" }}>BRISKWEB</h3>
-                        <Navbar.Toggle class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="icon-bar top-bar"></span>
-                            <span class="icon-bar middle-bar"></span>
-                            <span class="icon-bar bottom-bar"></span>
+                        <Navbar.Toggle className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="icon-bar top-bar"></span>
+                            <span className="icon-bar middle-bar"></span>
+                            <span className="icon-bar bottom-bar"></span>
                         </Navbar.Toggle>
 
                         <Navbar.Collapse id="responsive-navbar-nav">

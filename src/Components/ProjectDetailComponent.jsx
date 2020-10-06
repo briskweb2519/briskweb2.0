@@ -10,7 +10,7 @@ class ProjectDetailComponent extends Component {
         this.state = {
             name: "",
             summary: "",
-            details : "",
+            details: "",
             image: "",
             serviceName: "",
             url: "",
@@ -22,7 +22,7 @@ class ProjectDetailComponent extends Component {
         this.setState({
             name: this.props.history.location.state.name,
             summary: this.props.history.location.state.summary,
-            details : this.props.history.location.state.details,
+            details: this.props.history.location.state.details,
             image: this.props.history.location.state.image,
             serviceName: this.props.history.location.state.serviceName,
             url: this.props.history.location.state.url,
@@ -38,8 +38,8 @@ class ProjectDetailComponent extends Component {
         return (
             <>
                 <Container >
-                    <div class="row">
-                        <div class="col-md-8">
+                    <div className="row">
+                        <div className="col-md-8">
                             <Card className="mb-5">
                                 <Card.Body>
                                     <Card.Title style={{ color: "#195e83" }}>{this.state.name}</Card.Title>
@@ -49,7 +49,7 @@ class ProjectDetailComponent extends Component {
                                 </Card.Body>
                             </Card>
                         </div>
-                        <div class="col-md-4">
+                        <div className="col-md-4">
                             <Card className="mb-5">
                                 <Card.Body>
                                     <Card.Title style={{ color: "#195e83" }}>{this.state.name}</Card.Title>
@@ -57,11 +57,11 @@ class ProjectDetailComponent extends Component {
                                         {this.state.summary}
                                     </Card.Text>
                                     <div id="container">
-                                        <button class="learn-more" onClick={()=>this.changeRoute(this.state.url)}>
-                                            <span class="circle" aria-hidden="true">
-                                                <span class="icon arrow"></span>
+                                        <button className="learn-more" onClick={() => this.changeRoute(this.state.url)}>
+                                            <span className="circle" aria-hidden="true">
+                                                <span className="icon arrow"></span>
                                             </span>
-                                            <span class="button-text">Visit Website</span>
+                                            <span className="button-text">Visit Website</span>
                                         </button>
 
                                     </div>
@@ -72,7 +72,7 @@ class ProjectDetailComponent extends Component {
                                     <Card.Title style={{ color: "#195e83" }}>Tools/Services</Card.Title>
                                     <Card.Text>
                                         {this.state.serviceProvided.map(serve =>
-                                            <div><Image src={serve.image} style={{ width: "10%" }}></Image> {serve.name}<br/><br/></div>
+                                            <div><Image src={serve.image} style={{ width: "10%" }}></Image> {serve.name}<br /><br /></div>
                                         )}
                                     </Card.Text>
                                 </Card.Body>

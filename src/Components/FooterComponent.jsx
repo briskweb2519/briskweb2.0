@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Image from 'react-bootstrap/Image'
-// import { Link } from 'react-router-dom'
+
 class FooterComponent extends Component {
     // constructor(props){
     //     super(props)
@@ -16,23 +16,23 @@ class FooterComponent extends Component {
                     <a href="https://www.instagram.com/briskweb/"><Image src="/Images/instagram.png" width="30px"></Image></a>&nbsp;
                     <Image src="/Images/linkedin.png" width="30px"></Image>
                     <br /><br />
-                    <h6 style={{ color: "white",paddingBottom:"2%"}}>Copyright 2020 &#169; Briskweb</h6>
+                    <h6 style={{ color: "white", paddingBottom: "2%" }}>Copyright 2020 &#169; Briskweb</h6>
 
-                    {/* <Link class="scroll-up text-center" to="/">
-                        <span class="left-bar"></span>
-                        <span class="right-bar"></span>
+                    {/* <Link className="scroll-up text-center" to="/">
+                        <span className="left-bar"></span>
+                        <span className="right-bar"></span>
                         <svg width="40" height="40">
-                            <line class="top" x1="0" y1="0" x2="120" y2="0" />
-                            <line class="left" x1="0" y1="40" x2="0" y2="-80" />
-                            <line class="bottom" x1="40" y1="40" x2="-80" y2="40" />
-                            <line class="right" x1="40" y1="0" x2="40" y2="1200" />
+                            <line className="top" x1="0" y1="0" x2="120" y2="0" />
+                            <line className="left" x1="0" y1="40" x2="0" y2="-80" />
+                            <line className="bottom" x1="40" y1="40" x2="-80" y2="40" />
+                            <line className="right" x1="40" y1="0" x2="40" y2="1200" />
                         </svg>
                     </Link> */}
 
-                    {/* <a class="arrow-up">
-                    <span class="left-arm"></span>
-                    <span class="right-arm"></span>
-                    <span class="arrow-slide"></span>
+                    {/* <a className="arrow-up">
+                    <span className="left-arm"></span>
+                    <span className="right-arm"></span>
+                    <span className="arrow-slide"></span>
                 </a> */}
                 </div>
             </>

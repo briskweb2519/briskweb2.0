@@ -148,7 +148,7 @@ class HomeComponent extends Component {
                     <div className="text-center mb-5 mt-5">
                         <Image src="/Images/tab.png" width="12%" className="animate__animated animate__backInLeft tab" />
                         <Image src="/Images/pc.png" width="50%" className="animate__animated animate__backInDown laptop" />
-                        <Image src="/Images/phone.PNG" width="5%" className="animate__animated animate__backInRight phone" />
+                        <Image src="/Images/phone.png" width="5%" className="animate__animated animate__backInRight phone" />
                     </div>
 
                     <CardColumns style={{ marginTop: "10%" }}>

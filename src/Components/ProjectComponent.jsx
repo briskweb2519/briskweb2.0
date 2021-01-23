@@ -12,6 +12,67 @@ class ProjectComponent extends Component {
         this.state = {
             projects: [
                 {
+                    name: "Speedwell Cycle Industries",
+                    summary: "Speedwell Cycle Industries is a company which owns the wholesale supply of various companies of sports goods and automobile tyre-tubes.",
+                    details: `This project is about providing online presence of the local business. 
+                    
+                    The branding of the business is done by developing website with a unique design and 
+                    
+                    also by helping them reach to customers with the help of digital marketing. 
+                    
+                    Listing of products of three different companies is done in a way which attracts the attention of the customers.`,
+                    image: "/Images/speedwell/speedwellLogo.png",
+                    serviceName: "Web Development",
+                    url: "https://www.speedwells.in",
+                    serviceProvided: [
+                        {
+                            image: "/Images/react.jpg",
+                            name: "ReactJS",
+                        },
+                        {
+                            image: "/Images/github.jpg",
+                            name: "Github",
+                        },
+                    ],
+                    fun: "Speedwell"
+                },
+
+                {
+                    name: "Nutan Vastra Bhandar",
+                    summary: "Nutan Vastra Bhandar owns a manufacturing, designing, and selling of sarees, kurtis, and various traditional garments. It tops the market for 86 years.",
+                    details: `This is an e-commerce responsive website for the local business of Ahmedabad. 
+                    
+                    Key features developed for this project are : 
+                    
+                    - Shopping cart system
+                    - Filters and Sorting
+                    - Online payment
+                    - Display of images
+                    - Live tracking of order status`,
+                    image: "/Images/Nutan/Nutan.png",
+                    serviceName: "Web Development",
+                    url: "https://nutan.herokuapp.com/Nutan",
+                    serviceProvided: [
+                        {
+                            image: "/Images/react.jpg",
+                            name: "ReactJS",
+                        },
+                        {
+                            image: "/Images/node.png",
+                            name: "NodeJS",
+                        },
+                        {
+                            image: "/Images/mongo.png",
+                            name: "MongoDB",
+                        },
+                        {
+                            image: "/Images/heroku.png",
+                            name: "Heroku",
+                        }
+                    ],
+                    fun: "Nutan"
+                },
+                {
                     name: "CarWash Application",
                     summary: "Carwash application solves the business problem of connecting the workers , customers and the service provider seamlessly for an efficient and affordable car service experience.",
                     details: `This project is about automating registration of car washing service with a user-friendly hybrid application.
@@ -26,9 +87,9 @@ class ProjectComponent extends Component {
                     
                     It also aims for better management of resources and effective communication between various users of the platform.
                     `,
-                    image: "https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
+                    image: "/Images/carwash/carwash.png",
                     serviceName: "App Development",
-                    url: "https://www.briskweb.in",
+                    url: "https://proto2-1776e.firebaseapp.com/",
                     serviceProvided: [
                         {
                             image: "/Images/ionic.png",
@@ -57,74 +118,27 @@ class ProjectComponent extends Component {
                     ],
                     fun: "CarWash"
                 },
-
-                {
-                    name: "Speedwell",
-                    summary: "Speedwell Cycle Industries is a company which owns the wholesale supply of various companies of sports goods and automobile tyre-tubes.",
-                    details: "",
-                    image: "https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
-                    serviceName: "Web Development",
-                    url: "https://www.speedwells.in",
-                    serviceProvided: [
-                        {
-                            image: "/Images/react.jpg",
-                            name: "ReactJS",
-                        },
-                        {
-                            image: "/Images/github.jpg",
-                            name: "Github",
-                        },
-                    ],
-                    fun: "Speedwell"
-                },
-
-                {
-                    name: "Nutan Vastra Bhandar",
-                    summary: "Nutan Vastra Bhandar owns a manufacturing, designing, and selling of sarees, kurtis, and various tradditional garments. It tops the market for 86 years.",
-                    details: "",
-                    image: "https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D",
-                    serviceName: "Web Development",
-                    url: "https://www.briskweb.in",
-                    serviceProvided: [
-                        {
-                            image: "/Images/react.jpg",
-                            name: "ReactJS",
-                        },
-                        {
-                            image: "/Images/node.png",
-                            name: "NodeJS",
-                        },
-                        {
-                            image: "/Images/mongo.png",
-                            name: "MongoDB",
-                        },
-                        {
-                            image: "/Images/heroku.png",
-                            name: "Heroku",
-                        }
-                    ],
-                    fun: "Nutan"
-                },
             ]
         }
     }
 
 
-    CarWash() {
+
+    Speedwell() {
         this.props.history.push({
             pathname: '/project-details',
             state: this.state.projects[0]
         })
     }
 
-    Speedwell() {
+    Nutan() {
         this.props.history.push({
             pathname: '/project-details',
             state: this.state.projects[1]
         })
     }
-
-    Nutan() {
+    
+    CarWash() {
         this.props.history.push({
             pathname: '/project-details',
             state: this.state.projects[2]
@@ -145,13 +159,13 @@ class ProjectComponent extends Component {
                         }).map(project =>
                             <Col className="mx-auto d-flex justify-content-center">
                                 <Card className="card1" style={{ height: "400px", marginTop: "15px", marginBottom: "15px" }} >
-                                    <Card.Img variant="top" src={project.image} />
+                                    <Card.Img variant="top" src={project.image} style={{objectFit: "contain"}} />
                                     <Card.Body className="info">
                                         <Card.Title>{project.name}</Card.Title>
                                         <Card.Text>
                                             {project.summary}
                                         </Card.Text>
-                                        <button onClick={this[project.fun]}>Read More</button>
+                                        <button onClick={this[project.fun]}>Explore</button>
                                     </Card.Body>
                                 </Card>
                             </Col>

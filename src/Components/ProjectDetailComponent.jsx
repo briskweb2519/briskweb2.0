@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Image } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
+import {Carousel} from 'react-bootstrap'
 
 class ProjectDetailComponent extends Component {
     constructor(props) {
@@ -44,7 +45,7 @@ class ProjectDetailComponent extends Component {
                                 <Card.Body>
                                     <Card.Title style={{ color: "#195e83" }}>{this.state.name}</Card.Title>
                                     <Card.Text className="display-linebreak">
-                                        {this.state.details}
+                                        <br/>{this.state.details}
                                     </Card.Text>
                                 </Card.Body>
                             </Card>

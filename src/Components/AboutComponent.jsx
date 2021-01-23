@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Card from 'react-bootstrap/Card'
+import {Row,Col,Card} from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 
 class AboutComponent extends Component {
@@ -10,46 +10,36 @@ class AboutComponent extends Component {
         return (
             <>
                 <Container >
-                    <div className="row">
-                        <div className="col-md-6">
-                            <Card className="mb-5">
-                                <Card.Body>
-                                    <Card.Title>Card title that wraps to a new line</Card.Title>
-                                    <Card.Text>
-                                        This is a longer card with supporting text below as a natural lead-in to
-                                        additional content. This content is a little bit longer.
-                                    </Card.Text>
-                                    <div id="container">
-                                        <button className="learn-more">
-                                            <span className="circle" aria-hidden="true">
-                                                <span className="icon arrow"></span>
-                                            </span>
-                                            <span className="button-text">Learn More</span>
-                                        </button>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </div>
-                        <div className="col-md-6">
-                            <Card className="mb-5">
-                                <Card.Body>
-                                    <Card.Title>Card title that wraps to a new line</Card.Title>
-                                    <Card.Text>
-                                        This is a longer card with supporting text below as a natural lead-in to
-                                        additional content. This content is a little bit longer.
-                                    </Card.Text>
-                                    <div id="container">
-                                        <button className="learn-more">
-                                            <span className="circle" aria-hidden="true">
-                                                <span className="icon arrow"></span>
-                                            </span>
-                                            <span className="button-text">Learn More</span>
-                                        </button>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </div>
+                <div style={{textAlign:"center"}}>
+                        <h2>Our Team</h2>
                     </div>
+
+                    <Row>
+                        <Col className="mx-auto d-flex justify-content-center">
+                                <Card className="card1" style={{ height: "400px", paddingTop:"20%", marginTop: "15px", marginBottom: "15px" }} >
+                                    <Card.Img variant="top" src="/Images/Meet.jpg" style={{}} />
+                                    <Card.Body className="info">
+                                        <Card.Title>Meet Patel</Card.Title>
+                                        <Card.Text>
+                                            Software Developer
+                                        </Card.Text>
+                                        <button onClick="location.href='https://www.linkedin.com/in/meetpatel19/'">LinkedIn</button>
+                                        </Card.Body>
+                                </Card>
+                            </Col>
+                            <Col className="mx-auto d-flex justify-content-center">
+                                <Card className="card1" style={{ height: "400px", paddingTop:"20%", marginTop: "15px", marginBottom: "15px" }} >
+                                    <Card.Img variant="top" src="/Images/Parth.jpg" style={{}} />
+                                    <Card.Body className="info">
+                                        <Card.Title>Parth Parmar</Card.Title>
+                                        <Card.Text>
+                                            Software Developer
+                                        </Card.Text>
+                                        <button onClick="location.href='https://www.linkedin.com/in/parth-parmar-8aa318108/'">LinkedIn</button>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        </Row>
                 </Container>
             </>
         )

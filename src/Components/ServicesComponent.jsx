@@ -137,7 +137,7 @@ class ServicesComponent extends Component {
         return (
             <>
                 <Container>
-                    <CardColumns style={{ marginTop: "10%" }}>
+                    <CardColumns style={{ marginTop: "10%",marginBottom:"10%" }}>
                         {this.state.services.map(service =>
                             <ScrollAnimation animateIn="animate__animated animate__bounceInLeft">
                                 <Card>

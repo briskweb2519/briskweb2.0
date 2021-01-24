@@ -8,7 +8,7 @@ class FooterComponent extends Component {
     render() {
         return (
             <>
-                <div style={{ backgroundColor: "#195e83", textAlign: "center" }}>
+                <div style={{ backgroundColor: "#195e83", textAlign: "center",bottom:"0 !important" }}>
                     <br />
                     <h3 style={{ color: "white" }}>Quick Links</h3>
                     <br />

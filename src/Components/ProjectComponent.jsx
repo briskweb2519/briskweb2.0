@@ -147,8 +147,8 @@ class ProjectComponent extends Component {
     render() {
         return (
             <>
-                <Container className="mb-5" style={{ width: "100%" }}>
-                    <Row >
+                <Container className="mb-5" style={{ width: "100%"}}>
+                    <Row style={{ marginTop: "10%",marginBottom:"10%" }} >
                         {this.state.projects.filter((project) => {
                             if (project.serviceName === this.props.history.location.state) {
                                 return project

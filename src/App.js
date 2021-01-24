@@ -12,11 +12,13 @@ import ProjectDetailComponent from './Components/ProjectDetailComponent'
 import AboutComponent from './Components/AboutComponent'
 import ProjectDiscussComponent from './Components/ProjectDiscussComponent'
 import ServiceExploreCoponent from './Components/ServiceExploreCoponent'
+import ScrollToTop from './Components/ScrollToTop'
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop>
         <HeaderComponent />
         <Switch>
           <Route path='/' exact component={HomeComponent} />
@@ -29,6 +31,7 @@ function App() {
           <Route path="/services/explore" component={ServiceExploreCoponent} />
         </Switch>
         <FooterComponent />
+        </ScrollToTop>
       </Router>
     </>
   );

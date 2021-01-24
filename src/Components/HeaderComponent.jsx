@@ -27,7 +27,7 @@ class HeaderComponent extends Component {
                                 <Link className="nav-link" to="/" style={{ color: "white" }}>Home</Link>
                                 <Link className="nav-link" to="/services" style={{ color: "white" }}>Services</Link>
                                 <Link className="nav-link" to="/project" style={{ color: "white" }}>Projects</Link>
-                                <Link className="nav-link" to="/about" style={{ color: "white" }}>About</Link>
+                                {/* <Link className="nav-link" to="/about" style={{ color: "white" }}>About</Link> */}
                                 <Link className="nav-link" to="/contact" style={{ color: "white" }}>Contact</Link >
                             </Nav>
                         </Navbar.Collapse>

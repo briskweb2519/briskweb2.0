@@ -2,6 +2,22 @@ import React, { Component } from 'react'
 import { Container } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
+import emailjs from 'emailjs-com'
+
+function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('default_service', 'template_7xptVovv', e.target, 'user_sO9C00vJm3jHpqPJFnwme')
+      .then((result) => {
+          alert("Thank you! We will get back to you soon");
+          console.log(result.text);
+      }, (error) => {
+          alert("Error! Please try again later. ");
+          console.log(error.text);
+      });
+      e.target.reset();
+  }
+
 
 class ContactComponent extends Component {
     constructor(props) {
@@ -12,6 +28,8 @@ class ContactComponent extends Component {
     routChange() {
         this.props.history.push('/project-discuss')
     }
+
+  
 
     render() {
         return (
@@ -39,33 +57,33 @@ class ContactComponent extends Component {
                         <div className="col-md-8">
                             <Card className="mb-5">
                                 <h3 style={{ textAlign: "center", padding: "4%", backgroundColor: "#195e83", color: "white" }}>Have a question? Please enquire below</h3>
-                                <Form style={{ padding: "4%" }}>
+                                <Form style={{ padding: "4%" }} onSubmit={sendEmail}>
                                     <Form.Group controlId="exampleForm.ControlInput1">
                                         <Form.Label>Name</Form.Label>
-                                        <Form.Control type="text" placeholder="Jack Shukla" />
+                                        <Form.Control type="text" name="name" placeholder="Enter your name" required />
                                     </Form.Group>
                                     <Form.Group controlId="exampleForm.ControlInput1">
                                         <Form.Label>Email address</Form.Label>
-                                        <Form.Control type="email" placeholder="name@example.com" />
+                                        <Form.Control type="email" name="email" placeholder="Enter your email" required />
                                     </Form.Group>
                                     <Form.Group controlId="exampleForm.ControlInput1">
                                         <Form.Label>Website</Form.Label>
-                                        <Form.Control type="text" />
+                                        <Form.Control type="text" name="website" placeholder="example.com"  required />
                                     </Form.Group>
                                     <Form.Group controlId="exampleForm.ControlInput1">
                                         <Form.Label>Phone</Form.Label>
-                                        <Form.Control type="number" />
+                                        <Form.Control type="number" name="mobile" required/>
                                     </Form.Group>
                                     <Form.Group controlId="exampleForm.ControlTextarea1">
                                         <Form.Label>Message</Form.Label>
-                                        <Form.Control as="textarea" rows={3} />
+                                        <Form.Control as="textarea" name="message" rows={3} required/>
                                     </Form.Group>
                                     <div id="container">
-                                        <button className="learn-more">
+                                        <button className="learn-more" type="submit" >
                                             <span className="circle" aria-hidden="true">
                                                 <span className="icon arrow"></span>
                                             </span>
-                                            <span className="button-text">Enquire</span>
+                                            <span className="button-text" >Enquire</span>
                                         </button>
                                     </div>
                                 </Form>

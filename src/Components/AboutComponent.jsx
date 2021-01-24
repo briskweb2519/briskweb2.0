@@ -12,7 +12,7 @@ class AboutComponent extends Component {
                 <Container >
                 <div style={{textAlign:"center"}}>
                         <h2>Our Team</h2>
-                    </div>
+                </div>
 
                     <Row>
                         <Col className="mx-auto d-flex justify-content-center">
